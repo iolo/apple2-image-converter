@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apple2-image-converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>apple2-image-converter</h1>
+
+    <div class="controls">
+        <input type="file" id="sourceInput">
+        <div class="button-group"></div>
+    </div>
+
+    <div class="canvas-container">
+        <div class="canvas-wrapper">
+            <h2>Source Image</h2>
+            <canvas id="sourceCanvas"></canvas>
+        </div>
+        <div class="canvas-wrapper">
+            <h2>HGR Image</h2>
+            <canvas id="hgrCanvas"></canvas>
+            <div class="button-group">
+                <a id="hgrLink" download="hgr.bin">hgr.bin</a>
+            </div>
+            <h2>DHGR Image</h2>
+            <canvas id="dhgrCanvas"></canvas>
+            <div class="button-group">
+                <a id="dhgrLink" download="dhgr.a2fc">dhgr.a2fc</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="index.js" defer></script>
+</body>
+</html>
