@@ -1,42 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>apple2-image-converter</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="container">
-    <h1>apple2-image-converter</h1>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>apple2-image-converter</h1>
+    </header>
+    <main>
+      <p>
+        Choose a modern image file(.jpg,.png,.webp,...) to convert to Apple II Hi-Res(.bin) or Double Hi-Res(.a2fc)
+        format.
+      </p>
 
-    <p>Choose a modern image file(.jpg,.png,.webp,...) to convert to Apple II Hi-Res(.bin) or Double Hi-Res(.a2fc) format.</p>
+      <section>
+        <input type="file" id="sourceInput" />
+      </section>
 
-    <div class="controls">
-        <input type="file" id="sourceInput">
-        <div class="button-group"></div>
-    </div>
-
-    <div class="canvas-container">
-        <div class="canvas-wrapper">
-            <h2>Source Image</h2>
-            <canvas id="sourceCanvas"></canvas>
+      <section style="display:flex;justify-content:space-around;gap:16px;">
+        <div style="flex:1;">
+          <h2>Source Image</h2>
+          <canvas id="sourceCanvas"></canvas>
         </div>
-        <div class="canvas-wrapper">
-            <h2>HGR Image</h2>
+        <div style="flex:1;">
+          <div>
+            <h2>Hi-Res Image</h2>
             <canvas id="hgrCanvas"></canvas>
-            <div class="button-group">
-                <a id="hgrLink" download="hgr.bin">hgr.bin</a>
+            <div>
+              <a id="hgrLink" download="hgr.bin">hgr.bin</a>
             </div>
-            <h2>DHGR Image</h2>
+          </div>
+          <div>
+            <h2>Double Hi-Res Image</h2>
             <canvas id="dhgrCanvas"></canvas>
-            <div class="button-group">
-                <a id="dhgrLink" download="dhgr.a2fc">dhgr.a2fc</a>
+            <div>
+              <a id="dhgrLink" download="dhgr.a2fc">dhgr.a2fc</a>
             </div>
+          </div>
         </div>
-    </div>
-</div>
+      </section>
+    </main>
 
-<script src="index.js" defer></script>
-</body>
+    <footer>
+      <small>(C) 1973-2024 <a href="https://iolo.kr">IoloTheBard</a></small>
+    </footer>
+
+    <script src="index.js" defer></script>
+  </body>
 </html>
